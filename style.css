@@ -1,0 +1,532 @@
+/*
+Theme Name: Responsive Janga Lab Theme
+Theme URI: http://cyberchimps.com/guide/child-theme-example/
+Description: Responsive Janga Lab Theme
+Template: responsive
+Version: 1.0.0
+Author: CyberChimps
+Author URI: https://cyberchimps.com/
+License: GNU General Public License
+License URI: license.txt
+
+*/
+
+@font-face {
+    font-family: 'BentonSansRegular';
+    src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot");
+    src: url("https://fonts.iu.edu/fonts/benton-sans-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-regular.svg#BentonSansRegular") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'BentonSansCondRegular';
+    src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot");
+    src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'BentonSansCondBold';
+    src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot");
+    src: url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-bold.svg#BentonSansCondBold") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'GeorgiaProItalic';
+    src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot");
+    src: url("https://fonts.iu.edu/fonts/georgia-pro-italic.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.woff") format("woff"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/georgia-pro-italic.svg#GeorgiaProItalic") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'BentonSansCondRegular', Arial, Helvetica, sans-serif;
+}
+
+/*
+Branding Bar adapted from soic.iupui.edu styles
+*/
+
+/* Add a utitlity clearfix */
+.brand-clearfix:before
+.brand-clearfix:after {
+    content: '';
+    display: table;
+}
+
+.brand-clearfix:after {
+    clear: both;
+}
+
+#branding-bar {
+    background: #7A1705;
+    color: #fff;
+    min-height: 46px;
+    font-size: 16px;
+    text-align: right;
+    position: relative;
+    z-index: 5;
+    -webkit-font-smoothing: initial;
+    -moz-font-smoothing: initial;
+    font-smoothing: initial;
+}
+
+#branding-bar * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Campus names */
+#branding-bar .show-on-mobile {
+    display: inline;
+}
+
+#branding-bar .show-on-tablet, #branding-bar .show-on-desktop {
+    display: none;
+}
+
+#branding-bar .wrapper {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2.35765%;
+    padding-left: 2.35765%;
+}
+
+#branding-bar .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#branding-bar a {
+    color: #fff;
+}
+
+#branding-bar ul {
+    list-style: none;
+}
+
+#branding-bar p {
+    margin-top: 0;
+}
+
+/*** Bar ***/
+#branding-bar .bar {
+    border-top: 6px solid #990000;
+}
+
+/*** Trident Tab & Campus Name ***/
+#branding-bar .campus {
+    font-family: "BentonSansCondRegular", "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    /* 16px (16/16) */
+    font-weight: normal;
+    left: auto;
+    letter-spacing: 0.025em;
+    line-height: 1em;
+    /* 16px (16/16) */
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    top: 6px;
+    z-index: 400;
+    margin: 0;
+}
+
+#branding-bar .campus a {
+    font-family: inherit;
+    display: table-cell;
+    height: 40px;
+    padding: 0 0 0 50px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#branding-bar .campus a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+#branding-bar .campus img {
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    width: 40px;
+}
+
+#branding-bar .campus .expanded {
+    display: none;
+}
+
+/* 768px (768/16) */
+@media screen and (min-width: 48em) {
+    #branding-bar {
+        min-height: 52px;
+    }
+
+    /* Campus names */
+    #branding-bar .show-on-tablet {
+        display: inline;
+    }
+
+    #branding-bar .show-on-mobile, #branding-bar .show-on-desktop {
+        display: none;
+    }
+
+    /*** Trident Tab & Campus Name ***/
+    #branding-bar .campus {
+        font-size: 1.125em;
+        /* 18px (18/16) */
+        line-height: 1em;
+        /* 18px (18/18) */
+    }
+
+    #branding-bar .campus a {
+        height: 46px;
+        padding: 0 0 0 75px;
+    }
+
+    #branding-bar .campus img {
+        left: 0;
+        width: 64px;
+    }
+}
+/* 980px (980/16) - 960+20 for FF, IE, Opera d/t rounding */
+@media screen and (min-width: 60em) {
+    /* Campus names */
+    #branding-bar .show-on-desktop {
+        display: inline !important;
+    }
+
+    #branding-bar .show-on-tablet, #branding-bar .show-on-desktop {
+        display: none;
+    }
+
+    #branding-bar .wrapper {
+        padding: 0;
+    }
+
+    #branding-bar .campus abbr {
+        display: none;
+    }
+
+    #branding-bar .campus .expanded {
+        display: block;
+    }
+}
+
+/*
+Header
+*/
+
+#header {
+    background: #edebeb;
+}
+
+.site-name {
+    padding-top: 40px;
+    font-family: 'BentonSansCondRegular', Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 48em) {
+    .site-name {
+        padding-top: 20px;
+    }
+}
+
+.site-name a {
+    color: #000000;
+    font-weight: 400;
+    font-size: 125%;
+}
+
+.site-description {
+    color: #6F6F6F;
+    font-size: 1.5em;
+}
+
+/*
+Navigation
+*/
+
+.menu {
+    background-color: transparent;
+    background-image: none;
+}
+
+.menu a {
+    border-left: none;
+    text-shadow: none;
+    color: #000000;
+    border-bottom: 3px solid #edebeb;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.menu a:hover {
+    background-color: transparent;
+    background-image: none;
+    color: #000000;
+    border-bottom: 3px solid #990000;
+}
+
+.menu .current_page_item a, .menu .current-menu-item a {
+    background-color: transparent;
+    border-bottom: 3px solid #990000;
+}
+
+ul.menu > li:hover {
+    color: #000000;
+    background-color: transparent;
+}
+
+.menu > li:hover > a {
+    border-bottom: 3px solid #990000;
+}
+
+.menu > li:first-child > a {
+    padding-left: 0px;
+}
+
+.menu li li a {
+    padding: 10px 20px;
+    font-size: 120%;
+    background-color: #edebeb !important;
+}
+
+.menu li li a:hover {
+    background: #d4d2d2 !important;
+}
+
+/*
+Wrapper
+*/
+
+h1 {
+    margin-top: 0px;
+}
+
+p {
+    margin: 1.35em 0;
+}
+
+.breadcrumb-list,
+.post-edit {
+    font-size: 14px;
+}
+
+.widget-title h3, .widget-title-home h3 {
+    padding: 0 0 10px 0;
+}
+
+#wrapper {
+    padding: 0px;
+    border: none;
+}
+
+#content,
+#widgets {
+    margin-top: 20px;
+}
+
+.widget-wrapper {
+    padding: 0px;
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+.widget-title h3, .widget-title-home h3 {
+    padding: 10px;
+    background-color: #7A1705;
+    color: #ffffff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.post-entry p,
+.textwidget p {
+    font-size: 120%;
+    line-height: 1.5em;
+}
+
+/*
+Footer adapted from soic.iupui.edu styles
+*/
+
+#footer {
+  clear: both;
+  -webkit-font-smoothing: initial;
+  -moz-font-smoothing: initial;
+  font-smoothing: initial;
+}
+
+#footer * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#footer {
+    background: #fff;
+    font-size: 16px;
+    /* Force a default size for ems */
+    font-family: "BentonSansRegular", Arial, Helvetica, sans-serif;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+#footer .wrapper {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2.35765%;
+    padding-left: 2.35765%;
+}
+
+#footer .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#footer .tagline {
+    background: #7A1705;
+    color: #fff;
+    font-family: "BentonSansCondBold", "Arial Narrow", Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+    /* 18px (18/16) */
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    /* 18px (18/18) */
+    margin: 0 -2.35765% 10px;
+    padding: 5px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+#footer .tagline span {
+    font-family: GeorgiaProItalic, Georgia, serif;
+    font-size: .7778em;
+    /* 14px (14/18) */
+    text-transform: lowercase;
+    letter-spacing: 0;
+    display: inline-block;
+    margin-left: -4px;
+}
+
+#footer p {
+    font-size: .6875em;
+    /* 11px (11/16) */
+}
+
+#footer a {
+    color: #7d110c;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer .internal {
+    margin: 0 0 15px 0;
+}
+
+#footer .copyright {
+    margin: 0;
+}
+
+#footer .block-iu {
+    display: block;
+    height: 26px;
+    margin: 0 auto 5px auto;
+    width: 22px;
+}
+
+/* 768px (768/16) */
+@media screen and (min-width: 40em) {
+    #footer {
+    border-top: 6px solid #7A1705;
+    padding: 40px 0 30px 0;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    }
+
+    #footer .wrapper {
+        position: relative;
+    }
+
+    #footer .tagline {
+        font-size: 1.5em;
+        /* 24px (24/16) */
+        line-height: 1em;
+        /* 24px (24/24) */
+        text-align: center;
+        /* Positioning */
+        margin: 0 -200px 0 0;
+        padding: 8px 20px 8px 24px;
+        position: absolute;
+        left: 50%;
+        top: -66px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    #footer .tagline span {
+        font-size: .6667em;
+        /* 16px (16/14) */
+    }
+
+    #footer .copyright {
+        overflow: hidden;
+        padding: 7px 0 0 0;
+        position: relative;
+    }
+
+    #footer .internal {
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        z-index: 1;
+    }
+
+    #footer .block-iu {
+        float: left;
+        margin: -7px 9px 0 0;
+    }
+}
+/* 980px (980/16) - 960+20 for FF, IE, Opera d/t rounding */
+@media screen and (min-width: 60em) {
+    #footer .wrapper {
+        padding: 0;
+    }
+}
+
+.copyright {
+    text-align: left;
+}
+
+@media screen and (max-width: 639px) {
+    .copyright, .scroll-top, .powered {
+        float: none;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
