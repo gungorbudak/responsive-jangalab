@@ -1,2 +1,2 @@
 # responsive-jangalab
-Wordpress [Responsive](http://cyberchimps.com/responsive-theme/) child theme developed for the Janga Lab website
+Wordpress [Responsive](https://wordpress.org/themes/responsive/) child theme developed for the Janga Lab website
