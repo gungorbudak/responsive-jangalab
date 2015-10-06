@@ -16,7 +16,7 @@ $emtpy_cta = ( empty( $responsive_options['cta_text'] ) ) ? false : true;
 
 <div id="featured" class="grid col-940">
 
-    <?php $featured_content = ( !empty( $responsive_options['featured_content'] ) ) ? $responsive_options['featured_content'] : '<img class="aligncenter" src="' . get_template_directory_uri() . '/core/images/featured-image.png" width="440" height="300" alt="" />'; ?>
+    <?php $featured_content = ( !empty( $responsive_options['featured_content'] ) ) ? $responsive_options['featured_content'] : get_template_directory_uri() . '/core/images/featured-image.png'; ?>
 
     <div id="featured-content" style="background-image:url(<?php echo $featured_content; ?>);">
 

@@ -1,14 +1,13 @@
 /*
-Theme Name: Responsive Janga Lab Theme
-Theme URI: http://cyberchimps.com/guide/child-theme-example/
-Description: Responsive Janga Lab Theme
+Theme Name: Responsive Janga Lab
+Theme URI: https://github.com/gungorbudak/responsive-jangalab
+Description: Responsive Janga Lab
 Template: responsive
 Version: 1.0.0
-Author: CyberChimps
-Author URI: https://cyberchimps.com/
+Author: Gungor Budak
+Author URI: https://www.gungorbudak.com
 License: GNU General Public License
 License URI: license.txt
-
 */
 
 @font-face {
@@ -239,11 +238,13 @@ Header
 */
 
 #header {
-    background: #edebeb;
+    background: url(core/images/header-bg.jpg) no-repeat center #edebeb;
+    background-size: cover;
 }
 
 .site-name {
     padding-top: 50px;
+    text-transform: uppercase;
     font-family: 'BentonSansCondRegular', Arial, Helvetica, sans-serif;
 }
 
@@ -260,7 +261,7 @@ Header
 }
 
 .site-description {
-    color: #6F6F6F;
+    color: #505050;
     font-size: 1.5em;
 }
 
@@ -348,6 +349,12 @@ p {
     margin-top: 20px;
 }
 
+@media screen and (max-width: 980px) {
+    .front-page #widgets {
+        margin-top: 20px;
+    }
+}
+
 .widget-wrapper {
     padding: 0px;
     border: none;
@@ -379,6 +386,8 @@ Featured area
 #featured {
     padding-bottom: 0px;
     max-width: 960px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #featured-content {

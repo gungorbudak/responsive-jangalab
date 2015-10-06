@@ -38,6 +38,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
         <title><?php wp_title( '&#124;', true, 'right' ); ?></title>
 
+        <link href="<?php echo get_stylesheet_directory_uri() . '/core/images/favicon.ico'; ?>" rel="shortcut icon" type="image/x-icon"/>
         <link rel="profile" href="http://gmpg.org/xfn/11"/>
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 
