@@ -54,7 +54,11 @@ if ( !defined( 'ABSPATH' ) ) {
                     <img src="//assets.iu.edu/brand/legacy/trident-tab.gif" height="73" width="64" alt="Indiana University–Purdue University Indianapolis">
                     <span class="show-on-desktop" itemprop="name">Indiana University–Purdue University Indianapolis</span>
                     <span class="show-on-tablet" itemprop="name">Indiana University–Purdue University Indianapolis</span>
-                    <span class="show-on-mobile" itemprop="name">IUPUI</span>
+                    <span class="show-on-mobile" itemprop="name">IUPUI / SOIC</span>
+                </a>
+                <a class="soic" href="http://soic.iupui.edu" title="School of Informatics and Computing" target="_blank">
+                    <span class="show-on-desktop">School of Informatics and Computing</span>
+                    <span class="show-on-tablet">School of Informatics and Computing</span>
                 </a>
             </p>
         </div>
