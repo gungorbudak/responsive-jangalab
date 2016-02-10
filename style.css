@@ -290,7 +290,7 @@ Navigation
     border-bottom: 3px solid #990000;
 }
 
-.menu .current_page_item a, .menu .current-menu-item a {
+.menu .current_page_item > a, .menu .current-menu-item > a {
     background-color: transparent;
     border-bottom: 3px solid #990000;
 }
