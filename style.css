@@ -238,7 +238,7 @@ Header
 */
 
 #header {
-    background: url(core/images/header-bg.jpg) no-repeat center #edebeb;
+    background: url(core/images/header-bg-trans.jpg) no-repeat center #edebeb;
     background-size: cover;
 }
 
@@ -290,7 +290,7 @@ Navigation
     border-bottom: 3px solid #990000;
 }
 
-.menu .current_page_item > a, .menu .current-menu-item > a {
+.menu > .current_page_item > a, .menu > .current-menu-item > a {
     background-color: transparent;
     border-bottom: 3px solid #990000;
 }
@@ -346,6 +346,10 @@ p {
 
 #content,
 #widgets {
+    margin-top: 20px;
+}
+
+#content-archive {
     margin-top: 20px;
 }
 
